@@ -105,7 +105,7 @@ font-family: 'Poppins', sans-serif;
   }
 }
 
-
+.jobCard {
 /* Individual job card styling */
 max-width: 600px;        /* or whatever feels right */
   margin: 0 auto;          /* center it */
