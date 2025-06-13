@@ -1,0 +1,86 @@
+/* src/components/Layout.module.css */
+
+/* 0) Make the entire page a column flexbox, so footer sticks to bottom */
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Fill the entire viewport */
+}
+
+/* 1) Centered container (900px max‐width) */
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 2) WHITE HEADER */
+.headerWhite {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 0rem 0;
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 10rem;
+Margin-top: 0rem;
+Margin-botton: 0rem;
+}
+
+.logoImg {
+  height: 100px;
+}
+
+/* NAVIGATION */
+.nav {
+  display: inline-block;
+  margin-left: auto;
+}
+
+.navLink {
+  color: #0070f3;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.navLinkActive {
+  color: #000000;
+  text-decoration: underline;
+  margin-right: 1.5rem;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+/* 3) MAIN CONTENT AREA (light gray background). 
+      Give it flex:1 so it grows and pushes the footer down. */
+.main {
+  background-color: #f0f0f0; /* very light gray */
+  flex: 1;                  /* fill available vertical space */
+}
+
+/* 4) FOOTER */
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footerLink {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footerLink:hover {
+  color: #fff;
+}
+

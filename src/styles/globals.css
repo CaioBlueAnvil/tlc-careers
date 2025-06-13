@@ -1,0 +1,46 @@
+/* src/styles/globals.css */
+
+html,
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
