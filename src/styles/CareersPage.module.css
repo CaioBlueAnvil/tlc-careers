@@ -61,7 +61,7 @@ font-family: 'Poppins', sans-serif;
 .jobsWrapper {
   width: 100vw;  
   background-color: #000000;
-  padding: 2rem 0;      /* vertical padding above/below the content */
+  padding: 2rem 1rem;      /* vertical padding above/below the content */
   text-align: center;
 }
 
@@ -107,25 +107,23 @@ font-family: 'Poppins', sans-serif;
 
 
 /* Individual job card styling */
-.jobCard {
-  background-color: #ffffff;
-  border: 2px solid #fff;
+max-width: 600px;        /* or whatever feels right */
+  margin: 0 auto;          /* center it */
+  background-color: #fff;
   border-radius: 6px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr; /* Job Name=2fr, Type=1fr, Location=1fr */
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 1rem;
   align-items: center;
   padding: 1rem 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
-  width: 100%;            /* fill the container’s width */
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .jobCard {
-    grid-template-columns: 1fr; /* revert to a single column on small phones */
-    text-align: center;         /* center each field */
-  }
-  .jobType, .jobLocation {
+    max-width: 90%;        /* never more than 90% of the viewport */
+    padding: 0.75rem 1rem; /* slightly less padding on phones */
+    grid-template-columns: 1fr;  /* stack the columns */
     text-align: center;
   }
 }
