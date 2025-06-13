@@ -39,6 +39,15 @@
     font-size: 3rem;
   }
 }
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  .heroContent {
+    top: 55%;  /* pull it higher on small screens */
+  }
+}
+
 
 
 /* 4) TAGLINE STRIP: full‐width dark gray (#95989A) bar under the hero */
@@ -85,14 +94,25 @@ font-family: 'Poppins', sans-serif;
   background-color: #f0f0f0;
 }
 
-/* 6) JOB CARDS GRID: responsive layout of white cards */
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1rem;  /* 1rem of gutter on each side */
+}
+
 .jobsGrid {
   display: grid;
-  grid-template-columns: 1fr;  /* single column on mobile */
-  gap: 2rem;                   /* space between cards */
-  padding: 0 1rem;             /* horizontal padding on small screens */
-  justify-items: center;       /* center cards in each row */
-margin-top: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 0 1rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 640px) {
+  .jobsGrid {
+    grid-template-columns: 1fr;  /* one column under 640px */
+  }
 }
 
 
@@ -194,5 +214,20 @@ text-align: right;
 .breadcrumbs span {
   margin: 0 0.5rem;
   color: #666;
+}
+
+.jobsButton,
+.jobCard {
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 640px) {
+  .detailContainer {
+    padding: 0 0.5rem;
+  }
+  .detailCard {
+    padding: 1.5rem;
+  }
 }
 
