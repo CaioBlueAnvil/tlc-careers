@@ -61,7 +61,7 @@ Margin-botton: 0rem;
 /* 3) MAIN CONTENT AREA (dark Teal background). 
       Give it flex:1 so it grows and pushes the footer down. */
 .main {
-  background-color: #013030; /* dark teal */
+  background-color: #000000; /* dark teal */
   flex: 1;                  /* fill available vertical space */
 }
 
