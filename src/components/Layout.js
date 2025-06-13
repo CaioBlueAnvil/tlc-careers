@@ -12,8 +12,8 @@ export default function Layout({ children }) {
         <div className={styles.container}>
           <Link href="/" className={styles.logo}>
             <img
-              src="/anvil.svg"
-              alt="Blue Anvil Logo"
+              src="/tlc-logo.svg"
+              alt="Trades Labour Corporation Logo"
               className={styles.logoImg}
             />
           </Link>

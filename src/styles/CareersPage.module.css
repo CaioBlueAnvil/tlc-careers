@@ -7,10 +7,10 @@
 .hero {
   position: relative;                     /* so child .heroContent can be centered */
   width: 100vw;                           /* span the entire viewport width */
-  height: 80vh;                          /* span the entire viewport height */
+  height: 100vh;                          /* span the entire viewport height */
   background-image: url("/TLC-HERO.svg"); /* your cracked‐background file must be in /public */
   background-repeat: no-repeat;
-  background-position: center top;        /* ensure the top of that cracked image (with the anvil) is visible */
+  background-position: center center;        /* ensure the top of that cracked image (with the anvil) is visible */
   background-size: cover;                 /* cover the entire area without distortion */
 }
 
@@ -44,7 +44,7 @@
 /* 4) TAGLINE STRIP: full‐width dark gray (#95989A) bar under the hero */
 .taglineStrip {
   width: 100vw;
-  background-color: #95989A;
+  background-color: #013030;
   text-align: center;
   padding: 1rem 0;
 }
@@ -61,7 +61,7 @@ font-family: 'Poppins', sans-serif;
 /* 5) JOBS WRAPPER: full‐width mid‐gray (#95989A) background */
 .jobsWrapper {
   width: 100vw;  
-  background-color: #95989A;
+  background-color: #013030;
   padding: 2rem 0;      /* vertical padding above/below the content */
   text-align: center;
 }

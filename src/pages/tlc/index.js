@@ -12,15 +12,14 @@ export default function TLCJobs({ jobs }) {
       {/* ===== 1) HERO (full‐screen cracked BG with “TLC / Careers”) ===== */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>TLC</h1>
-          <h1 className={styles.heroTitle}>Careers</h1>
+          <h1 className={styles.heroTitle}></h1>
+          <h1 className={styles.heroTitle}></h1>
         </div>
       </section>
 
       {/* ===== 2) TAGLINE STRIP ===== */}
       <section className={styles.taglineStrip}>
         <p className={styles.taglineText}>
-          Join the path to become an Elite Tradesperson
         </p>
       </section>
 
