@@ -1,5 +1,8 @@
 /* src/styles/globals.css */
-
+html, body {
+  overflow-x: hidden;    /* force no horizontal scrolling */
+  width: 100%;           /* ensure no 100vw quirks */
+}
 html,
 body {
   min-height: 100vh;
