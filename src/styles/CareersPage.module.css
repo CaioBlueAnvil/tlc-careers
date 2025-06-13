@@ -8,7 +8,7 @@
   position: relative;                     /* so child .heroContent can be centered */
   width: 100vw;                           /* span the entire viewport width */
   height: 80vh;                          /* span the entire viewport height */
-  background-image: url("/cracked-bg.png"); /* your cracked‐background file must be in /public */
+  background-image: url("/TLC-HERO.svg"); /* your cracked‐background file must be in /public */
   background-repeat: no-repeat;
   background-position: center top;        /* ensure the top of that cracked image (with the anvil) is visible */
   background-size: cover;                 /* cover the entire area without distortion */

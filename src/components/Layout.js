@@ -6,11 +6,7 @@ import styles from "./Layout.module.css";
 export default function Layout({ children }) {
   return (
     <div className={styles.pageContainer}>
-      <Head>
-        <title>Blue Anvil Careers</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-
+     
       {/* ===== HEADER ===== */}
       <header className={styles.headerWhite}>
         <div className={styles.container}>

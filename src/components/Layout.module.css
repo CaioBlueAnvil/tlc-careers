@@ -58,10 +58,10 @@ Margin-botton: 0rem;
   font-size: 25px;
 }
 
-/* 3) MAIN CONTENT AREA (light gray background). 
+/* 3) MAIN CONTENT AREA (dark Teal background). 
       Give it flex:1 so it grows and pushes the footer down. */
 .main {
-  background-color: #f0f0f0; /* very light gray */
+  background-color: #013030; /* dark teal */
   flex: 1;                  /* fill available vertical space */
 }
 
