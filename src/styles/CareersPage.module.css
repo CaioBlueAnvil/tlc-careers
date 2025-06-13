@@ -3,51 +3,41 @@
 /* 0) Import Poppins ExtraBold */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 
-/* 1) HERO SECTION: full‐screen cracked background, positioned to show the anvil */
+/* src/styles/CareersPage.module.css */
+
 .hero {
-  position: relative;                     /* so child .heroContent can be centered */
-  width: 100vw;                           /* span the entire viewport width */
-  height: 100vh;                          /* span the entire viewport height */
-  background-image: url("/TLC-HERO.svg"); /* your cracked‐background file must be in /public */
+  position: relative;
+  width: 100%;                   /* fluid width */
+  background-image: url("/TLC-HERO.svg");
   background-repeat: no-repeat;
-  background-position: center center;        /* ensure the top of that cracked image (with the anvil) is visible */
-  background-size: cover;                 /* cover the entire area without distortion */
+  background-size: cover;
+  background-position: top center; 
 }
 
-/* 2) Overlay content inside the hero, centered vertically/horizontally */
-.heroContent {
-  position: absolute;                     /* position this block inside .hero (which is relative) */
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);       /* center it exactly */
-  text-align: center;
-}
-
-/* 3) The two‐line title “Blue Anvil” / “Careers” */
-.heroTitle {
-  font-family: 'Poppins', sans-serif;     /* Poppins ExtraBold */
-  font-weight: 800;                       /* ExtraBold weight */
-  font-size: 5rem;                        /* adjust up/down to taste */
-  color: #164791;                         /* your requested blue color */
-  -webkit-text-stroke: 0.5px #ffffff;     /* white outline, 0.5px thick */
-  text-stroke: 0.5px #ffffff;             /* for browsers that support text-stroke */
-  line-height: 1.1;                       /* tighten line spacing slightly */
-  margin: 0;                              /* remove default h1 margins */
-}
-@media (max-width: 480px) {
-  .heroTitle {
-    font-size: 3rem;
+/* Desktop: full viewport height */
+@media (min-width: 641px) {
+  .hero {
+    height: 100vh;
   }
 }
+
+/* Mobile: keep a 16:9 aspect ratio */
 @media (max-width: 640px) {
-  .heroTitle {
-    font-size: 2.5rem;
+  .hero {
+    aspect-ratio: 16 / 9;        /* browsers that support it */
+    height: auto;                /* aspect-ratio takes care of height */
   }
+  
   .heroContent {
-    top: 55%;  /* pull it higher on small screens */
+    top: 50%;                    /* vertically center inside that 16:9 box */
+    transform: translate(-50%, -50%);
+  }
+  
+  .heroTitle {
+    font-size: 2rem;             /* shrink your text some more */
+    line-height: 1.1;
   }
 }
-
 
 
 /* 4) TAGLINE STRIP: full‐width dark gray (#95989A) bar under the hero */
@@ -103,7 +93,7 @@ font-family: 'Poppins', sans-serif;
 
 .jobsGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 1.5rem;
   padding: 0 1rem;
   margin-top: 3rem;
