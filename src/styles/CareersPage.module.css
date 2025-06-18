@@ -6,39 +6,53 @@
 /* src/styles/CareersPage.module.css */
 
 .hero {
-  position: relative;
-  width: 100%;                   /* fluid width */
-  background-image: url("/TLC-HERO.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center; 
+  display: flex;                /* enable flex centering */
+  align-items: center;          /* vertical center */
+  justify-content: center;      /* horizontal center */
+  width: 100%;                  /* full width of parent */
+  height: 100vh;                /* full viewport height */
+  background: url("/TLC-PAGE.png") bottom center / cover no-repeat;
+  position: relative;           /* if you still need absolute children */
 }
 
-/* Desktop: full viewport height */
-@media (min-width: 641px) {
-  .hero {
-    height: 100vh;
-  }
+.heroContent {
+  text-align: center;
+  padding: 0 1rem;              /* gutter on small screens */
 }
 
-/* Mobile: keep a 16:9 aspect ratio */
+/* Title styling unchanged */
+.heroTitle {
+  font-size: 4rem;
+font-family: 'Poppins', sans-serif;
+ -webkit-text-stroke: 0.5px #ffffff;
+}
+
+/* Add a subtitle style if you want the extra line under the title */
+.heroSubtitle {
+  margin-top: 9rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #FFFFFF;               /* or your chosen accent color */
+  line-height: 1.2;
+-webkit-text-stroke: 0.5px #000000;
+text-stroke: 0.5px #000000;
+}
+
 @media (max-width: 640px) {
-  .hero {
-    aspect-ratio: 16 / 9;        /* browsers that support it */
-    height: auto;                /* aspect-ratio takes care of height */
-  }
-  
-  .heroContent {
-    top: 50%;                    /* vertically center inside that 16:9 box */
-    transform: translate(-50%, -50%);
-  }
-  
   .heroTitle {
-    font-size: 2rem;             /* shrink your text some more */
-    line-height: 1.1;
+margin-bottom: 0rem;
+    font-size: 2.5rem;          /* a bit smaller on phones */
+ -webkit-text-stroke: 0.5px #ffffff;
+text-stroke: 0.5px #ffffff;
+  }
+  .heroSubtitle {
+Line-height: 1;
+    font-size: 1.5rem;
+color: #000000;
+-webkit-text-stroke: 0.5px #ffffff;
+text-stroke: 0.5px #ffffff;
   }
 }
-
 
 /* 4) TAGLINE STRIP: full‐width dark gray (#95989A) bar under the hero */
 .taglineStrip {

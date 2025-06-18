@@ -1,5 +1,3 @@
-// src/pages/tlc/index.js
-
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import { fetchTLCJobs } from "../../../lib/tlcJobs";
@@ -9,11 +7,16 @@ import layoutStyles from "../../components/Layout.module.css";
 export default function TLCJobs({ jobs }) {
   return (
     <Layout>
-      {/* ===== 1) HERO (full‐screen cracked BG with “TLC / Careers”) ===== */}
+      {/* ===== 1) HERO (full‐screen cracked BG) ===== */}
       <section className={styles.hero}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}></h1>
-          <h1 className={styles.heroTitle}></h1>
+         <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>
+            Build Your Career<br/>with TLC
+          </h1>
+          <p className={styles.heroSubtitle}>
+            Take the next step in your career.<br/>
+            Work with the best across the top labour industries.
+          </p>
         </div>
       </section>
 
@@ -55,4 +58,3 @@ export async function getStaticProps() {
   const jobs = await fetchTLCJobs();
   return { props: { jobs }, revalidate: 60 };
 }
-
