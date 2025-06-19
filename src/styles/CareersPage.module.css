@@ -3,12 +3,18 @@
 /* 0) Import Poppins ExtraBold */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 
+@font-face {
+  font-family: "Anodyne Combined";
+  src: url("/fonts/AnodyneCombined-Bold.woff2") format("woff2"),
+       url("/fonts/AnodyneCombined-Bold.woff")  format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 /* src/styles/CareersPage.module.css */
 
 .hero {
-  display: flex;                /* enable flex centering */
-  align-items: center;          /* vertical center */
-  justify-content: center;      /* horizontal center */
   width: 100%;                  /* full width of parent */
   height: 100vh;                /* full viewport height */
   background: url("/TLC-PAGE.png") bottom center / cover no-repeat;
@@ -16,20 +22,27 @@
 }
 
 .heroContent {
-  text-align: center;
-  padding: 0 1rem;              /* gutter on small screens */
+  Position: absolute;
+  top: 3rem;
+  left: 3rem;
 }
 
 /* Title styling unchanged */
 .heroTitle {
-  font-size: 4rem;
-font-family: 'Poppins', sans-serif;
- -webkit-text-stroke: 0.5px #ffffff;
+  font-family: 'Anodyne Combined', sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  color: #164791;
+  -webkit-text-stroke: 1px #ffffff;
+  text-stroke: 1px #ffffff;
+  margin: 0;
+  line-height: 1.2;
 }
 
 /* Add a subtitle style if you want the extra line under the title */
 .heroSubtitle {
-  margin-top: 9rem;
+  margin-left: 10rem;
+  margin-top: 30rem;
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
   color: #FFFFFF;               /* or your chosen accent color */
@@ -40,17 +53,19 @@ text-stroke: 0.5px #000000;
 
 @media (max-width: 640px) {
   .heroTitle {
-margin-bottom: 0rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
     font-size: 2.5rem;          /* a bit smaller on phones */
- -webkit-text-stroke: 0.5px #ffffff;
-text-stroke: 0.5px #ffffff;
+    -webkit-text-stroke: 0.7px #ffffff;
+    text-stroke: 0.7px #ffffff;
   }
   .heroSubtitle {
-Line-height: 1;
+    margin-top: 0rem; 
+    Line-height: 1;
     font-size: 1.5rem;
-color: #000000;
--webkit-text-stroke: 0.5px #ffffff;
-text-stroke: 0.5px #ffffff;
+    color: #000000;
+    -webkit-text-stroke: 0.5px #ffffff;
+    text-stroke: 0.5px #ffffff;
   }
 }
 
