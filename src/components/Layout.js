@@ -1,26 +1,28 @@
 // src/components/Layout.js
 import Head from "next/head";
-import Link from "next/link";
 import styles from "./Layout.module.css";
 
 export default function Layout({ children }) {
   return (
     <div className={styles.pageContainer}>
-     
       {/* ===== HEADER ===== */}
       <header className={styles.headerWhite}>
         <div className={styles.container}>
-          <Link href="/" className={styles.logo}>
+          <a
+            href="https://www.tlcvictoria.ca"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.logo}
+          >
             <img
               src="/tlc-logo.svg"
               alt="Trades Labour Corporation Logo"
               className={styles.logoImg}
             />
-          </Link>
+          </a>
 
           <nav className={styles.nav}>
-            
-      
+            {/* Add nav items here if needed */}
           </nav>
         </div>
       </header>
@@ -46,4 +48,3 @@ export default function Layout({ children }) {
     </div>
   );
 }
-

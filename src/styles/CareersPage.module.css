@@ -25,6 +25,7 @@
   Position: absolute;
   top: 3rem;
   left: 3rem;
+  text-align: center;
 }
 
 /* Title styling unchanged */
@@ -37,18 +38,28 @@
   text-stroke: 1px #ffffff;
   margin: 0;
   line-height: 1.2;
+
 }
 
 /* Add a subtitle style if you want the extra line under the title */
 .heroSubtitle {
-  margin-left: 10rem;
-  margin-top: 30rem;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
-  color: #FFFFFF;               /* or your chosen accent color */
-  line-height: 1.2;
--webkit-text-stroke: 0.5px #000000;
-text-stroke: 0.5px #000000;
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0 1rem;  /* gutter so it never touches edges on mobile */
+  font-weight: 700px;
 }
 
 @media (max-width: 640px) {

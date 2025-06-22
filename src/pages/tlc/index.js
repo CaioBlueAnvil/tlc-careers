@@ -8,18 +8,20 @@ export default function TLCJobs({ jobs }) {
   return (
     <Layout>
       {/* ===== 1) HERO (full‐screen cracked BG) ===== */}
-      <section className={styles.hero}>
-         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>
-            Build Your Career<br/>with TLC
-          </h1>
-          <p className={styles.heroSubtitle}>
-            Take the next step in your career.<br/>
-            Work with the best across the top labour industries.
-          </p>
-        </div>
-      </section>
+     <section className={styles.hero}>
+  {/* Top‐left title */}
+  <div className={styles.heroContent}>
+    <h1 className={styles.heroTitle}>
+      Build Your Career<br/>with TLC
+    </h1>
+  </div>
 
+  {/* Centered subtitle, two explicit lines */}
+  <div className={styles.heroSubtitle}>
+    <div>Take the next step in your career.</div>
+    <div>Work with the best across the top labour industries.</div>
+  </div>
+</section>
       {/* ===== 2) TAGLINE STRIP ===== */}
       <section className={styles.taglineStrip}>
         <p className={styles.taglineText}>
