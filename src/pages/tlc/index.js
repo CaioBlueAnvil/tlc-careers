@@ -44,7 +44,7 @@ export default function TLCJobs({ jobs }) {
               >
                 <p className={styles.jobName}>{job["Job Name"]}</p>
                 <p className={styles.jobType}>
-                  {job["Employment Type"] || "Full Time"}
+                  {job["Employment Type"] || "Part Time"}
                 </p>
                 <p className={styles.jobLocation}>{job["Location"]}</p>
               </Link>
