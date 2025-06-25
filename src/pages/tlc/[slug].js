@@ -24,8 +24,8 @@ export default function JobDetail({ job }) {
             <h1 style={{ color: "#164791", fontSize: "2rem" }}>
               {job["Job Name"]}
             </h1>
-            <p>
-              <strong>Type:</strong> {job["Employment Type"]}
+            <p style={{ margin: "0.5rem 0", fontWeight: "500" }}>
+              <strong>Type:</strong> {job["Employment Type"] || "Flexible"}
             </p>
             <p>
               <strong>Location:</strong> {job["Location"]}
