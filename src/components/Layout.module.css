@@ -1,86 +1,97 @@
 /* src/components/Layout.module.css */
 
-/* 0) Make the entire page a column flexbox, so footer sticks to bottom */
 .pageContainer {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;  /* Fill the entire viewport */
+  min-height: 100vh;
+  background: #070b14;
 }
 
-/* 1) Centered container (900px max‐width) */
 .container {
-  max-width: 1500px;
+  width: min(1320px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
-/* 2) WHITE HEADER */
 .headerWhite {
-  background-color: #013030;
-  border-bottom: 1px solid #ddd;
-  padding: 0rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid rgba(230, 236, 255, 0.22);
+  background: rgba(8, 15, 30, 0.64);
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+}
+
+.headerWhite .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 92px;
 }
 
 .logo {
-  display: inline-block;
-  margin-right: 10rem;
-Margin-top: 0rem;
-Margin-botton: 0rem;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .logoImg {
-  height: 100px;
+  height: clamp(46px, 6vw, 62px);
+  width: auto;
 }
 
-/* NAVIGATION */
 .nav {
-  display: inline-block;
-  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .navLink {
-  color: #0070f3;
+  color: #e6ecff;
   text-decoration: none;
-  margin-right: 1.5rem;
-  font-weight: 500;
-  font-size: 25px;
+  font-family: "Roboto Condensed", "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
 }
 
-.navLink:hover {
-  text-decoration: underline;
-}
-
+.navLink:hover,
 .navLinkActive {
-  color: #000000;
-  text-decoration: underline;
-  margin-right: 1.5rem;
-  font-weight: 600;
-  font-size: 25px;
+  color: #63b3ff;
 }
 
-/* 3) MAIN CONTENT AREA (dark Teal background). 
-      Give it flex:1 so it grows and pushes the footer down. */
 .main {
-  background-color: #000000; /* dark teal */
-  flex: 1;                  /* fill available vertical space */
+  flex: 1;
 }
 
-/* 4) FOOTER */
 .footer {
-  background-color: #222;
-  color: #ccc;
-  padding: 1rem 0;
+  border-top: 1px solid rgba(230, 236, 255, 0.2);
+  background: rgba(8, 15, 30, 0.58);
+  backdrop-filter: blur(12px) saturate(125%);
+  -webkit-backdrop-filter: blur(12px) saturate(125%);
+  color: rgba(230, 236, 255, 0.72);
   text-align: center;
-  font-size: 14px;
+  font-size: 0.82rem;
+}
+
+.footer .container {
+  padding: 1.2rem 0 1.4rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer p + p {
+  margin-top: 0.45rem;
 }
 
 .footerLink {
-  color: #ccc;
+  color: #63b3ff;
   text-decoration: none;
-  margin: 0 0.5rem;
 }
 
 .footerLink:hover {
-  color: #fff;
+  color: #e6ecff;
 }
-
